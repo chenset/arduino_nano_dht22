@@ -1,3 +1,5 @@
+#include <Adafruit_SSD1306.h>
+
 #include <SPI.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
@@ -20,7 +22,7 @@ DHT22 myDHT22(6);
 void setup()
 {
    Wire.begin();           //I2C总线
-//  Serial.begin(9600);
+  Serial.begin(9600);
 
   
   display.begin(SSD1306_SWITCHCAPVCC);
@@ -31,7 +33,7 @@ void setup()
   display.print("GO");
   display.display();
 
-  delay(5000);
+  delay(2000);
 
 }
 
@@ -41,7 +43,6 @@ void loop()
   display.clearDisplay();
   display.setTextSize(2);
   display.setCursor(0, 0);
-  
   display.println(arr[0]);
   display.println(arr[1]);
   display.display();
@@ -49,7 +50,7 @@ void loop()
 
 
 //Serial.println(*arr);
-//Serial.println(arr[1]);
+Serial.println(arr[1]);
   delay(3000);
 }
 
