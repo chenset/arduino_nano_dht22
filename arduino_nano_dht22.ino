@@ -22,7 +22,7 @@ DHT22 myDHT22(6);
 void setup()
 {
    Wire.begin();           //I2C总线
-  Serial.begin(9600);
+//  Serial.begin(9600);
 
   
   display.begin(SSD1306_SWITCHCAPVCC);
@@ -50,7 +50,7 @@ void loop()
 
 
 //Serial.println(*arr);
-Serial.println(arr[1]);
+//Serial.println(arr[1]);
   delay(3000);
 }
 
